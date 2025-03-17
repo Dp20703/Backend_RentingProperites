@@ -5,6 +5,7 @@ const { register_user } = require('./API/register_user');
 const { register_owner } = require('./API/register_owner');
 const { upload_property } = require('./API/upload_property');
 const { send_feedback } = require('./API/send_feedback');
+const { send_inquiry } = require('./API/send_inquiry');
 
 
 //connecting to database:
@@ -17,10 +18,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 //routes:
+//user routes:
 app.post("/register_user", register_user);
+
+//owner routes:
 app.post("/register_owner", register_owner);
 app.post("/upload_property", upload_property);
+
+//common routes:
 app.post("/send_feedback", send_feedback);
+app.post("/send_inquiry", send_inquiry);
 
 
 
