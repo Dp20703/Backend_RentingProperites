@@ -4,6 +4,7 @@ const cors = require("cors");
 const { register_user } = require('./API/register_user');
 const { register_owner } = require('./API/register_owner');
 const { upload_property } = require('./API/upload_property');
+const { send_feedback } = require('./API/send_feedback');
 
 
 //connecting to database:
@@ -19,6 +20,7 @@ app.use(cors());
 app.post("/register_user", register_user);
 app.post("/register_owner", register_owner);
 app.post("/upload_property", upload_property);
+app.post("/send_feedback", send_feedback);
 
 
 
