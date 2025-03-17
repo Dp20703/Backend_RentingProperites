@@ -6,6 +6,7 @@ const { register_owner } = require('./API/register_owner');
 const { upload_property } = require('./API/upload_property');
 const { send_feedback } = require('./API/send_feedback');
 const { send_inquiry } = require('./API/send_inquiry');
+const { send_request } = require('./API/send_request');
 
 
 //connecting to database:
@@ -28,6 +29,7 @@ app.post("/upload_property", upload_property);
 //common routes:
 app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
+app.post("/send_request", send_request);
 
 
 
