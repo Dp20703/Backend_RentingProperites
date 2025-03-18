@@ -7,6 +7,7 @@ const { upload_property } = require('./API/upload_property');
 const { send_feedback } = require('./API/send_feedback');
 const { send_inquiry } = require('./API/send_inquiry');
 const { send_request } = require('./API/send_request');
+const { ContactUs } = require('./API/contactUs');
 
 
 //connecting to database:
@@ -30,10 +31,12 @@ app.post("/upload_property", upload_property);
 app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
+app.post("/contactUs", ContactUs)
+
 
 
 
 //port:
-const PORT =process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT);
 console.log(`Server is listing on port http:localhost:${PORT}`)
