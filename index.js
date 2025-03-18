@@ -34,6 +34,6 @@ app.post("/send_request", send_request);
 
 
 //port:
-const PORT = 8000;
+const PORT =process.env.PORT || 4000;
 app.listen(PORT);
 console.log(`Server is listing on port http:localhost:${PORT}`)

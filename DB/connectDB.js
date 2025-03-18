@@ -1,17 +1,20 @@
+require("dotenv").config(); // Load dotenv before using process.env
+
 const { MongoClient } = require("mongodb");
 
-const url = "mongodb+srv://dp2073:1234@trio.6o0jg.mongodb.net/?retryWrites=true&w=majority&appName=Trio";
+const url = process.env.MONGODB_URI; // Load from .env
 const client = new MongoClient(url);
 
 async function connectDB() {
     try {
-         await client.connect();
-        console.log('Connected to the MongoDB Atlas');
+        await client.connect();
+        console.log("✅ Connected to MongoDB Atlas");
         const database = client.db("RentingProperties");
         return database;
-
     } catch (error) {
-        console.log(error);
+        console.error("❌ MongoDB Connection Error:", error.message);
+        process.exit(1);
     }
 }
+
 module.exports = connectDB;
