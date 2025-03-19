@@ -15,6 +15,8 @@ const { FetchAllProperty } = require('./API/FetchAllProperty');
 const { FetchAllRequest } = require('./API/FetchAllRequest');
 const { FetchAllFeedback } = require('./API/FetchAllFeedback');
 const { FetchAllInquiry } = require('./API/FetchAllInquiry');
+const { send_complaint } = require('./API/send_complaint');
+const { FetchAllComplaint } = require('./API/FetchAllComplaint');
 
 
 
@@ -39,6 +41,7 @@ app.post("/upload_property", upload_property);
 app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
+app.post("/send_complaint", send_complaint);
 app.post("/contactUs", ContactUs)
 app.post("/login", login);
 app.get("/fetch_all_user", FetchAllUser);
@@ -47,6 +50,7 @@ app.get("/fetch_all_property", FetchAllProperty);
 app.get("/fetch_all_request", FetchAllRequest);
 app.get("/fetch_all_feedback", FetchAllFeedback);
 app.get("/fetch_all_inquiry", FetchAllInquiry);
+app.get("/fetch_all_complaint", FetchAllComplaint);
 
 
 
