@@ -17,7 +17,7 @@ const { FetchAllFeedback } = require('./API/FetchAllFeedback');
 const { FetchAllInquiry } = require('./API/FetchAllInquiry');
 const { send_complaint } = require('./API/send_complaint');
 const { FetchAllComplaint } = require('./API/FetchAllComplaint');
-const { booking } = require('./API/booking');
+const { booking } = require('./API/make_booking');
 const { FetchAllBooking } = require('./API/FetchAllBooking');
 
 
@@ -40,6 +40,7 @@ app.post("/register_owner", register_owner);
 app.post("/upload_property", upload_property);
 
 //common routes:
+//POST:
 app.post("/login", login);
 app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
@@ -48,6 +49,7 @@ app.post("/send_complaint", send_complaint);
 app.post("/make_booking", booking)
 app.post("/contactUs", ContactUs)
 
+//GET:
 app.get("/fetch_all_user", FetchAllUser);
 app.get("/fetch_all_owner", FetchAllOwner);
 app.get("/fetch_all_property", FetchAllProperty);
