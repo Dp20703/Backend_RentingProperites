@@ -9,6 +9,7 @@ const { send_inquiry } = require('./API/send_inquiry');
 const { send_request } = require('./API/send_request');
 const { ContactUs } = require('./API/contactUs');
 const { login } = require('./API/login');
+const { FetchAllUser } = require('./API/FetchAllUser');
 
 
 //connecting to database:
@@ -33,7 +34,8 @@ app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
 app.post("/contactUs", ContactUs)
-app.post("/login",login);
+app.post("/login", login);
+app.get("/fetchalluser", FetchAllUser);
 
 
 
