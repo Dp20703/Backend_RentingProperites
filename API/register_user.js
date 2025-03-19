@@ -3,7 +3,7 @@ const connectDB = require("../DB/connectDB");
 async function register_user(req, res) {
   try {
     const db = await connectDB();
-    const collection = db.collection("Login");
+    const collection = db.collection("Register");
 
     const { l_Id, firstName, lastName, email, phoneNo, password } = req.body;
 
