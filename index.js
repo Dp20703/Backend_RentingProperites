@@ -10,6 +10,12 @@ const { send_request } = require('./API/send_request');
 const { ContactUs } = require('./API/contactUs');
 const { login } = require('./API/login');
 const { FetchAllUser } = require('./API/FetchAllUser');
+const { FetchAllOwner } = require('./API/FetchAllOwner');
+const { FetchAllProperty } = require('./API/FetchAllProperty');
+const { FetchAllRequest } = require('./API/FetchAllRequest');
+const { FetchAllFeedback } = require('./API/FetchAllFeedback');
+const { FetchAllInquiry } = require('./API/FetchAllInquiry');
+
 
 
 //connecting to database:
@@ -35,7 +41,12 @@ app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
 app.post("/contactUs", ContactUs)
 app.post("/login", login);
-app.get("/fetchalluser", FetchAllUser);
+app.get("/fetch_all_user", FetchAllUser);
+app.get("/fetch_all_owner", FetchAllOwner);
+app.get("/fetch_all_property", FetchAllProperty);
+app.get("/fetch_all_request", FetchAllRequest);
+app.get("/fetch_all_feedback", FetchAllFeedback);
+app.get("/fetch_all_inquiry", FetchAllInquiry);
 
 
 
