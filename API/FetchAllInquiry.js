@@ -4,7 +4,7 @@ const connectDB = require("../DB/connectDB");
 async function FetchAllInquiry(req, res) {
     try {
         const db = await connectDB();
-        const collection = db.collection("Request");
+        const collection = db.collection("Inquiry");
         const userData = await collection.find().toArray();
         if (userData == 0) {
             res.status(404).json({ message: "No Inquiry Found" });

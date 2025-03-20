@@ -4,9 +4,9 @@ async function send_complaint(req, res) {
     try {
         const db = await connectDB();
         const collection = db.collection("Complaint");
-        const { c_Id, user_Id, owner_Id, name, email, phone, role, complaint, status, response} = req.body;
+        const { complaint_Id, user_Id, owner_Id, name, email, phone, role, complaint, status, response } = req.body;
         await collection.insertOne({
-            c_Id,
+            complaint_Id,
             user_Id,
             owner_Id,
             name,

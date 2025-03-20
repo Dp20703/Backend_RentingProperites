@@ -4,7 +4,7 @@ const connectDB = require("../DB/connectDB");
 async function FetchAllProperty(req, res) {
     try {
         const db = await connectDB();
-        const collection = db.collection("Register");
+        const collection = db.collection("Property");
         const userData = await collection.find().toArray();
         if (userData == 0) {
             res.status(404).json({ message: "No property Found" });

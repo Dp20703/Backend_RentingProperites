@@ -11,7 +11,7 @@ async function send_inquiry(req, res) {
             owner_Id,
             inquiryDate,
             subject,
-            status,
+            status:"Pending",
             resolutionDate,
             response,
         });
