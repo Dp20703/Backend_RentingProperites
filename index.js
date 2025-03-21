@@ -19,6 +19,8 @@ const { send_complaint } = require('./API/send_complaint');
 const { FetchAllComplaint } = require('./API/FetchAllComplaint');
 const { booking } = require('./API/make_booking');
 const { FetchAllBooking } = require('./API/FetchAllBooking');
+const { make_payment } = require('./make_payment');
+const { FetchAllPayments } = require('./API/FetchAllPayments');
 
 
 
@@ -34,6 +36,7 @@ app.use(cors());
 //routes:
 //user routes:
 app.post("/register_user", register_user);
+app.post("/make_payment", make_payment);
 
 //owner routes:
 app.post("/register_owner", register_owner);
@@ -46,8 +49,10 @@ app.post("/send_feedback", send_feedback);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
 app.post("/send_complaint", send_complaint);
-app.post("/make_booking", booking)
-app.post("/contactUs", ContactUs)
+app.post("/make_booking", booking);
+app.post("/contactUs", ContactUs);
+
+
 
 //GET:
 app.get("/fetch_all_user", FetchAllUser);
@@ -58,6 +63,7 @@ app.get("/fetch_all_feedback", FetchAllFeedback);
 app.get("/fetch_all_inquiry", FetchAllInquiry);
 app.get("/fetch_all_complaint", FetchAllComplaint);
 app.get("/fetch_all_booking", FetchAllBooking);
+app.get("/fetch_all_payment", FetchAllPayments);
 
 
 
