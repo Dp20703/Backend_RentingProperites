@@ -6,10 +6,11 @@ async function upload_property(req, res) {
         const collection = db.collection("Property");
 
 
-        const { property_Id, title, description, location, address, zipCode, propertyType, category, size, price, bedrooms, bathrooms, images: [], propertyIdentityType, propertyProof: [], amenities: [], identityType, identityId, } = req.body;
+        const { property_Id, owner_Id, title, description, location, address, zipCode, propertyType, category, size, price, bedrooms, bathrooms, images: [], propertyIdentityType, propertyProof: [], amenities: [], identityType, identityId, } = req.body;
 
         await collection.insertOne({
             property_Id,
+            owner_Id,
             title,
             description,
             location,

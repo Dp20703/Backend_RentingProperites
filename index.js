@@ -21,6 +21,9 @@ const { booking } = require('./API/make_booking');
 const { FetchAllBooking } = require('./API/FetchAllBooking');
 const { make_payment } = require('./make_payment');
 const { FetchAllPayments } = require('./API/FetchAllPayments');
+const { manage_bookings } = require('./API/manage_bookings');
+const { view_payments } = require('./API/view_payment');
+const { manage_property } = require('./API/manage_property');
 
 
 
@@ -41,16 +44,19 @@ app.post("/make_payment", make_payment);
 //owner routes:
 app.post("/register_owner", register_owner);
 app.post("/upload_property", upload_property);
+app.get("/manage_booking", manage_bookings);
+app.get("/manage_property", manage_property);
+app.get("/view_payment", view_payments);
 
 //common routes:
 //POST:
 app.post("/login", login);
-app.post("/send_feedback", send_feedback);
+app.post("/contactUs", ContactUs);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
-app.post("/send_complaint", send_complaint);
 app.post("/make_booking", booking);
-app.post("/contactUs", ContactUs);
+app.post("/send_feedback", send_feedback);
+app.post("/send_complaint", send_complaint);
 
 
 
@@ -58,12 +64,12 @@ app.post("/contactUs", ContactUs);
 app.get("/fetch_all_user", FetchAllUser);
 app.get("/fetch_all_owner", FetchAllOwner);
 app.get("/fetch_all_property", FetchAllProperty);
-app.get("/fetch_all_request", FetchAllRequest);
-app.get("/fetch_all_feedback", FetchAllFeedback);
 app.get("/fetch_all_inquiry", FetchAllInquiry);
-app.get("/fetch_all_complaint", FetchAllComplaint);
+app.get("/fetch_all_request", FetchAllRequest);
 app.get("/fetch_all_booking", FetchAllBooking);
 app.get("/fetch_all_payment", FetchAllPayments);
+app.get("/fetch_all_feedback", FetchAllFeedback);
+app.get("/fetch_all_complaint", FetchAllComplaint);
 
 
 
