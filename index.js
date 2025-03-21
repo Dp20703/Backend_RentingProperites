@@ -39,6 +39,7 @@ app.use(cors());
 //routes:
 //user routes:
 app.post("/register_user", register_user);
+app.post("/make_booking", booking);
 app.post("/make_payment", make_payment);
 
 //owner routes:
@@ -49,28 +50,23 @@ app.get("/manage_property", manage_property);
 app.get("/view_payment", view_payments);
 
 //common routes:
-//POST:
 app.post("/login", login);
 app.post("/contactUs", ContactUs);
 app.post("/send_inquiry", send_inquiry);
 app.post("/send_request", send_request);
-app.post("/make_booking", booking);
 app.post("/send_feedback", send_feedback);
 app.post("/send_complaint", send_complaint);
 
-
-
-//GET:
+//admin routes:
 app.get("/fetch_all_user", FetchAllUser);
 app.get("/fetch_all_owner", FetchAllOwner);
 app.get("/fetch_all_property", FetchAllProperty);
-app.get("/fetch_all_inquiry", FetchAllInquiry);
 app.get("/fetch_all_request", FetchAllRequest);
+app.get("/fetch_all_inquiry", FetchAllInquiry);
 app.get("/fetch_all_booking", FetchAllBooking);
 app.get("/fetch_all_payment", FetchAllPayments);
 app.get("/fetch_all_feedback", FetchAllFeedback);
 app.get("/fetch_all_complaint", FetchAllComplaint);
-
 
 
 
