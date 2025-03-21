@@ -1,4 +1,4 @@
-const connectDB = require("./DB/connectDB");
+const connectDB = require("../DB/connectDB");
 
 async function make_payment(req, res) {
     try {
