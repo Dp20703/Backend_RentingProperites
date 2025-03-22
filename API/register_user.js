@@ -5,10 +5,9 @@ async function register_user(req, res) {
     const db = await connectDB();
     const collection = db.collection("Register");
 
-    const { l_Id, firstName, lastName, email, phoneNo, password } = req.body;
+    const { firstName, lastName, email, phoneNo, password } = req.body;
 
     await collection.insertOne({
-      l_Id,
       firstName,
       lastName,
       email,
