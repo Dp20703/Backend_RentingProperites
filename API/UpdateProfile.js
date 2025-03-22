@@ -5,13 +5,7 @@ async function UpdateProfile(req, res) {
     try {
         const db = await connectDB();
         const collection = db.collection("Register");
-        const {
-            id,
-            firstName,
-            lastName,
-            email,
-            phoneNo,
-            password, } = req.body;
+        const {id,firstName,lastName,email,phoneNo,password, } = req.body;
         const updateData = {
             $set: {
                 firstName,

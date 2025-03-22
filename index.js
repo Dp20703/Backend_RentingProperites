@@ -25,6 +25,7 @@ const { manage_bookings } = require('./API/manage_bookings');
 const { view_payments } = require('./API/view_payment');
 const { manage_property } = require('./API/manage_property');
 const { UpdateProfile } = require('./API/UpdateProfile');
+const { UpdateProperty } = require('./API/UpdateProperty');
 
 
 
@@ -49,6 +50,7 @@ app.post("/upload_property", upload_property);
 app.get("/manage_booking", manage_bookings);
 app.get("/manage_property", manage_property);
 app.get("/view_payment", view_payments);
+app.post("/update_property",UpdateProperty)
 
 //common routes:
 app.post("/login", login);
